@@ -12,24 +12,6 @@ Solução:
 O padrão Observer permite que objetos (observadores) se inscrevam para receber notificações e atualizações de um objeto observável. 
 Quando o objeto observável muda de estado, ele notifica todos os seus observadores automaticamente.
 
-DIAGRAMA:
-
-
-+--------------+      notifies      +------------+
-|   Subject    | -----------------> |  Observer  |
-+--------------+                    +------------+
-| attach(observer)                  | update()   |
-| detach(observer)                  +------------+
-| notifyObservers()                             |
-+--------------+                               |
-        |                                      |
-        |                                      |
-        v                                      v
-+------------------+                 +------------------+
-|   ConcreteSubject|                 |  ConcreteObserver |
-+------------------+                 +------------------+
-|    state         |                 |   state          |
-+------------------+                 +------------------+
 
 - Factory Methody
   Descrição:
@@ -44,21 +26,6 @@ Solução:
 O Factory Method define um método que deve ser implementado pelas subclasses para criar um objeto específico. Isso permite que a lógica
 de criação de objetos seja desacoplada do código cliente que usa esses objetos.
 
-Diagrama:
-                   +------------------+
-                  |     Creator      |
-                  +------------------+
-                  | +FactoryMethod() |
-                  +------------------+
-                          |
-                          |
-                   +------+------+
-                   |             |
-         +---------+--+    +-----+---------+
-         |  ConcreteCreator1  |  ConcreteCreator2 |
-         +--------------------+------------------+
-         | +FactoryMethod()   | +FactoryMethod() |
-         +--------------------+------------------+
          
 - Proxxy
   Descrição:
@@ -73,19 +40,3 @@ Solução:
 O Proxy cria um objeto que atua como um intermediário entre o cliente e o objeto real. O Proxy recebe solicitações do cliente, 
 executa a lógica adicional se necessário (como verificação de permissão, cache, etc.) e, em seguida, repassa a solicitação para o 
 objeto real.
-
-Diagrama:
-                  +--------------+
-                  |    Subject   |
-                  +--------------+
-                  | +Request()   |
-                  +--------------+
-                          |
-                          |
-                   +------+------+
-                   |             |
-          +--------+---+     +---+---------+
-          |  Proxy    |     |   RealSubject |
-          +-----------+     +--------------+
-          | +Request()|     | +Request()   |
-          +-----------+     +--------------+
