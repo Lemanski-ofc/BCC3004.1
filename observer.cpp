@@ -1,18 +1,5 @@
-/*Descrição:
-O padrão Observer define uma dependência de um-para-muitos entre objetos, de modo que quando um objeto muda de estado, 
-todos os seus dependentes são notificados e atualizados automaticamente.
+/*Diagrama: 
 
-Problema:
-Quando temos objetos que precisam reagir a mudanças em outros objetos de forma eficiente e desacoplada, sem que o objeto 
-que faz a mudança precise conhecer detalhes dos objetos dependentes.
-
-Solução:
-O padrão Observer permite que objetos (observadores) se inscrevam para receber notificações e atualizações de um objeto observável. 
-Quando o objeto observável muda de estado, ele notifica todos os seus observadores automaticamente.aaaa
-
-DIAGRAMA:*/
-
-/*
 +--------------+      notifies      +------------+
 |   Subject    | -----------------> |  Observer  |
 +--------------+                    +------------+
