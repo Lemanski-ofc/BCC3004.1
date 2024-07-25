@@ -1,15 +1,3 @@
-/*Descrição:
-O padrão Proxy fornece um substituto ou marcador para outro objeto para controlar o acesso a ele. Ele permite que você forneça uma
- interface de substituição ou um placeholder para outro objeto.
-
-Problema:
-Quando queremos controlar o acesso a um objeto por razões como segurança, eficiência ou logging sem modificar o código do objeto 
-original.
-
-Solução:
-O Proxy cria um objeto que atua como um intermediário entre o cliente e o objeto real. O Proxy recebe solicitações do cliente, 
-executa a lógica adicional se necessário (como verificação de permissão, cache, etc.) e, em seguida, repassa a solicitação para o 
-objeto real.
 
 Diagrama:
                   +--------------+
